@@ -536,17 +536,20 @@ footer p {
     font-size: 1rem;
   }
 
+  header {
+    padding: 0.5rem 0;
+    /* Minimal vertical padding */
+  }
+
   nav ul {
     flex-direction: row;
-    /* Horizontal layout */
     flex-wrap: wrap;
-    /* Wrap if needed */
-    gap: 0.5rem;
-    /* Tighter spacing */
+    gap: 0.25rem;
+    /* Even tighter spacing */
     justify-content: center;
-    /* Center items */
     width: 100%;
-    margin-top: 0.5rem;
+    margin-top: 0.25rem;
+    /* Reduced top margin */
   }
 
   nav a {
