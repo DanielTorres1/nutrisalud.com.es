@@ -127,8 +127,22 @@ for filename in os.listdir(ARTICLES_DIR):
 # 2. Generate Tag Pages
 print("Generating tag pages...")
 
+def normalize_tag_filename(tag_text):
+    # Lowercase
+    clean = tag_text.lower()
+    # Remove accents and special chars
+    replacements = {
+        'á': 'a', 'é': 'e', 'í': 'i', 'ó': 'o', 'ú': 'u',
+        'ñ': 'n',
+        'Á': 'a', 'É': 'e', 'Í': 'i', 'Ó': 'o', 'Ú': 'u',
+        'Ñ': 'n'
+    }
+    for search, replace in replacements.items():
+        clean = clean.replace(search, replace)
+    return clean
+
 def generate_tag_page(tag_name, articles):
-    safe_name = tag_name.lower()
+    safe_name = normalize_tag_filename(tag_name)
     
     html_content = f"""<!DOCTYPE html>
 <html lang="es">
@@ -211,7 +225,7 @@ tag_cloud_html = f'''
 '''
 
 for tag in sorted(tags_map.keys()):
-    safe_name = tag.lower()
+    safe_name = normalize_tag_filename(tag)
     tag_cloud_html += f'                <a href="tags/{safe_name}.html" class="tag-pill" style="background-color: var(--pale-green); color: var(--dark-green); padding: 0.5rem 1.2rem; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: transform 0.2s;">#{tag}</a>\n'
 
 tag_cloud_html += '''            </div>
