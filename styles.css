@@ -537,23 +537,38 @@ footer p {
   }
 
   nav ul {
-    flex-direction: column;
-    gap: var(--spacing-sm);
-    align-items: center;
+    flex-direction: row;
+    /* Horizontal layout */
+    flex-wrap: wrap;
+    /* Wrap if needed */
+    gap: 0.5rem;
+    /* Tighter spacing */
+    justify-content: center;
+    /* Center items */
     width: 100%;
+    margin-top: 0.5rem;
   }
 
   nav a {
-    display: block;
-    width: 100%;
+    display: inline-block;
+    width: auto;
+    /* Natural width */
     text-align: center;
-    padding: 0.75rem;
-    /* Larger touch target */
+    padding: 0.4rem 0.8rem;
+    /* Smaller padding */
+    font-size: 0.95rem;
+    /* Slightly smaller font */
+    background: rgba(255, 255, 255, 0.1);
+    /* Subtle background for buttons */
+    border-radius: 20px;
+    /* Pill shape */
   }
 
   .header-container {
     flex-direction: column;
-    gap: var(--spacing-md);
+    gap: 0.5rem;
+    /* Reduced gap between logo and nav */
+    padding-bottom: 0.5rem;
   }
 
   .category-grid,
