@@ -9,7 +9,7 @@
   /* Gradients */
   --gradient-primary: linear-gradient(135deg, #2d5a3d 0%, #4a8159 100%);
   --gradient-light: linear-gradient(135deg, #7fb892 0%, #a8d5ba 100%);
-  --gradient-hero: linear-gradient(135deg, rgba(45, 90, 61, 0.95) 0%, rgba(74, 129, 89, 0.9) 100%);
+  --gradient-hero: linear-gradient(135deg, rgba(45, 90, 61, 0.85) 0%, rgba(74, 129, 89, 0.8) 100%);
 
   /* Neutral colors */
   --text-dark: #2c3e50;
@@ -170,7 +170,7 @@ nav a:hover {
 
 /* Hero Section */
 .hero {
-  background: var(--gradient-hero), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400"><rect fill="%234a8159" width="1200" height="400"/></svg>');
+  background: var(--gradient-hero), url('images/banner-alimentacion-saludable-hero.webp');
   background-size: cover;
   background-position: center;
   color: var(--white);
